@@ -6,6 +6,7 @@ TagManager:
   tags:
   - App
   - AppObject
+  - Canvas
   layers:
   - Default
   - TransparentFX
