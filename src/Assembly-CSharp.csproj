@@ -448,6 +448,27 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Elasticsearch.Net">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+        <HintPath>C:\Dev\SystemView\src\Assets\TechInc\Lib\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
     </Reference>
