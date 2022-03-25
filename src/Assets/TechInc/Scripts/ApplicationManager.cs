@@ -10,7 +10,6 @@ public class ApplicationManager : MonoBehaviour
     public GameObject App;
     public RequestObject Request;
 
-    public RectTransform panel;
     private List<RequestObject> Requests = new List<RequestObject>();
 
     public int NumRequests = 1;
@@ -65,9 +64,12 @@ public class ApplicationManager : MonoBehaviour
         {
             if(!Applications.ContainsKey(request.CallingApplicationName))          
             {
-                Vector3 spawnPosition = GetBottomLeftCorner(panel) - new Vector3(Random.Range(0, panel.rect.x), Random.Range(0, panel.rect.y), 0);
-
-                var obj = Instantiate(App, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+                int x = Random.Range(-360,360);
+                int y = Random.Range(-360,360);
+                int z = Random.Range(-50,50);
+                
+                Vector3 thePosition = transform.TransformPoint(x, y, z);
+                var obj = Instantiate(App, thePosition, Quaternion.identity);
                 obj.name = request.CallingApplicationName;
 
                 Applications.Add(request.CallingApplicationName, obj);
@@ -75,9 +77,13 @@ public class ApplicationManager : MonoBehaviour
 
             if(!Applications.ContainsKey(request.DestinationAppName))
             {
-                Vector3 spawnPosition = GetBottomLeftCorner(panel) - new Vector3(Random.Range(0, panel.rect.x), Random.Range(0, panel.rect.y), 0);
+                int x = Random.Range(-360,360);
+                int y = Random.Range(-360,360);
+                int z = Random.Range(-360,360);
 
-                var obj = Instantiate(App, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+                Vector3 thePosition = transform.TransformPoint(x, y, z);
+                var obj = Instantiate(App, thePosition, Quaternion.identity);
+
                 obj.name = request.DestinationAppName;
 
                 Applications.Add(request.DestinationAppName,obj);
