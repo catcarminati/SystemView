@@ -12,6 +12,8 @@ public class ApplicationManager : MonoBehaviour
 
     private List<RequestObject> Requests = new List<RequestObject>();
 
+    public SpawnZone SpawnZone;
+
     public int NumRequests = 1;
     // Start is called before the first frame update
     async void Start()
@@ -64,12 +66,13 @@ public class ApplicationManager : MonoBehaviour
         {
             if(!Applications.ContainsKey(request.CallingApplicationName))          
             {
-                int x = Random.Range(-360,360);
-                int y = Random.Range(-360,360);
-                int z = Random.Range(-50,50);
+                // int x = Random.Range(Room.transform.position,360);
+                // int y = Random.Range(-360,360);
+                // int z = Random.Range(-360,360);
                 
-                Vector3 thePosition = transform.TransformPoint(x, y, z);
-                var obj = Instantiate(App, thePosition, Quaternion.identity);
+                //Vector3 thePosition = transform.TransformPoint(x, y, z);
+                //var obj = Instantiate(App, thePosition, Quaternion.identity);
+                var obj = Instantiate(App, SpawnZone.SpawnPoint, Quaternion.identity);
                 obj.name = request.CallingApplicationName;
 
                 Applications.Add(request.CallingApplicationName, obj);
@@ -77,13 +80,13 @@ public class ApplicationManager : MonoBehaviour
 
             if(!Applications.ContainsKey(request.DestinationAppName))
             {
-                int x = Random.Range(-360,360);
-                int y = Random.Range(-360,360);
-                int z = Random.Range(-360,360);
+                // int x = Random.Range(-360,360);
+                // int y = Random.Range(-360,360);
+                // int z = Random.Range(-360,360);
 
-                Vector3 thePosition = transform.TransformPoint(x, y, z);
-                var obj = Instantiate(App, thePosition, Quaternion.identity);
-
+                // Vector3 thePosition = transform.TransformPoint(x, y, z);
+                // var obj = Instantiate(App, thePosition, Quaternion.identity);
+                var obj = Instantiate(App, SpawnZone.SpawnPoint, Quaternion.identity);
                 obj.name = request.DestinationAppName;
 
                 Applications.Add(request.DestinationAppName,obj);
@@ -148,6 +151,4 @@ public class ApplicationManager : MonoBehaviour
             Requests.Add(newRequest);
         }
     }
-
-
 }
