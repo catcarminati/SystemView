@@ -1,10 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using System;
+
+
+[Serializable]
 public class RequestObject : MonoBehaviour
 {
-    public int Key;
     public string CallingApplicationName;
     public string DestinationAppName;
+
     public Vector3 TargetPosition;
 
     void Start()
